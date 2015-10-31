@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+}
+html, body {
+  font-family: 'Raleway', Arial, sans-serif;
+  background: #F9F7F6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 10%;
+  height: 100%;
+  color: #404D5B;
+  font-size: 1.1em;
+}
+.full-width {
+  width: 100%;
+  padding: 5%;
+}
+#splash {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+#about {
+  background: #F0EFEE;
+}
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#portfolio {
+  background: #F9F7F6;
+}
+.logo h1 {
+  font-weight: bold;
+  font-size: 5em;
+}
+.location {
+  color: #E74C3C;
+}
+.site-name {
+  color: #F9F7F6;
+  padding: 5px;
+  display: inline;
+  border: 1px solid #E74C3C;
+  background-color: #E74C3C;
+}
+.site-name-wrap {
+  margin-bottom: 10px;
+}
+ul {
+    list-style: none;
+    padding-left: 5px;
+}
+li:before {
+    content: "- ";
+}
+.col-md-6 {
+    padding-left: 0;
+}
+a {
+  color: #34495E;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #34495E;
+  text-decoration: underline;
+}
+#nav-trio h4 {
+  border-bottom: .07em solid #000;
+}
+nav a {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  margin-left: -12px;
+  font-size: .9em;
+}
+nav a:hover, nav a:focus {
+  outline: none;
+}
+.myface {
+  border: 1px solid #FAEBD7;
+  border-radius: 25%;
+  width: 100%;
+  max-width: 200px;
+  margin-right: 30px;
+}
+.about-para {
+  font-size: 1.5em;
+}
+@media screen and (max-width: 1200px) {
+  .about-para {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .about-para {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 950px) {
+  .about-para {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 780px) {
+  body {
+    margin-bottom: 5%;
+  }
+  .logo h1 {
+    font-size: 4.25em;
+  }
+  .about-para {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #splash {
+    text-align: center;
+    margin-top: 2%;
+  }
+  #nav-trio h4 {
+    font-weight: bold;
+    border-bottom: none;
+  }
+  .nav-item {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .myface {
+    float: none;
+    margin-bottom: 20px;
+  }
+  #about {
+    text-align: center;
+  }
+  .about-me {
+    display: block;
+  }
+  #portfolio {
+    text-align: center
+  }
+  li {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo h1 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo h1 {
+    font-size: 3em;
+  }
+  .logo h3 {
+    font-size: 1.15em;
+  }
+}
+@media screen and (max-width: 400px) {
+  html, body {
+    font-size: 1em;
+  }
+  .logo h1 {
+    font-size: 2em;
+  }
+  .logo h3 {
+    font-size: 1em;
+  }
+}
