@@ -120,6 +120,9 @@ nav a:hover, nav a:focus {
   #clips h1, #clips h2{
     text-align: center;
   }
+  .col-md-12 {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 600px) {
   .logo h1 {
