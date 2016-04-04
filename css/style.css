@@ -13,7 +13,7 @@ html, body {
 }
 .full-width {
   width: 100%;
-  padding: 5%;
+  padding: 10%;
 }
 #splash {
   min-height: 100%;
@@ -22,16 +22,8 @@ html, body {
   margin: 0 auto;
   margin-top: 10%;
 }
-#about {
+#clips {
   background: #F0EFEE;
-}
-.about-me {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#portfolio {
-  background: #F9F7F6;
 }
 .logo h1 {
   font-weight: bold;
@@ -49,13 +41,6 @@ html, body {
 }
 .site-name-wrap {
   margin-bottom: 10px;
-}
-ul {
-    list-style: none;
-    padding-left: 5px;
-}
-li:before {
-    content: "- ";
 }
 .col-md-6 {
     padding-left: 0;
@@ -81,30 +66,30 @@ nav a {
 nav a:hover, nav a:focus {
   outline: none;
 }
-.myface {
-  border: 1px solid #FAEBD7;
-  border-radius: 25%;
-  width: 100%;
-  max-width: 200px;
-  margin-right: 30px;
+#clips-content {
+  width: 70%;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border-top: 5px solid #E74C3C;
 }
-.about-para {
-  font-size: 1.5em;
+.accordion a {
+  display: block;
 }
-@media screen and (max-width: 1200px) {
-  .about-para {
-    font-size: 1.4em;
-  }
+.accordion__menu:hover,
+.accordion__menu:focus {
+  cursor: pointer;
+  color: #0D1A28;
 }
-@media screen and (max-width: 1100px) {
-  .about-para {
-    font-size: 1.3em;
-  }
+.accordion__items a {
+  padding: 5px 0;
 }
-@media screen and (max-width: 950px) {
-  .about-para {
-    font-size: 1.1em;
-  }
+.accordion__items a:before {
+  content: "• ";
+  color: #0D1A28;
+}
+.accordion__items {
+  display: none;
 }
 @media screen and (max-width: 780px) {
   body {
@@ -112,9 +97,6 @@ nav a:hover, nav a:focus {
   }
   .logo h1 {
     font-size: 4.25em;
-  }
-  .about-para {
-    font-size: 1em;
   }
 }
 @media screen and (max-width: 768px) {
@@ -129,23 +111,14 @@ nav a:hover, nav a:focus {
   .nav-item {
     margin-bottom: 30px;
   }
-}
-@media screen and (max-width: 680px) {
-  .myface {
-    float: none;
-    margin-bottom: 20px;
+  #clips-content {
+    width: 100%;
   }
-  #about {
+  .full-width {
+    padding: 0;
+  }
+  #clips h1, #clips h2{
     text-align: center;
-  }
-  .about-me {
-    display: block;
-  }
-  #portfolio {
-    text-align: center
-  }
-  li {
-    text-align: left;
   }
 }
 @media screen and (max-width: 600px) {
