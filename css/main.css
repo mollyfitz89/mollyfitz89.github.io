@@ -163,3 +163,9 @@ html, body {
     background: #0A5C77;
     color: #fff;
 }
+.accordion__items a:hover, .accordion__items a:focus {
+  text-decoration: none;
+}
+.accordion__items a:hover span, .accordion__items a:focus span {
+  text-decoration: underline;
+}
