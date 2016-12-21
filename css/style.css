@@ -148,3 +148,9 @@ nav a:hover, nav a:focus {
     font-size: 1em;
   }
 }
+.accordion__items a:hover, .accordion__items a:focus {
+  text-decoration: none;
+}
+.accordion__items a:hover span, .accordion__items a:focus span {
+  text-decoration: underline;
+}
