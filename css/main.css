@@ -6,8 +6,12 @@ html {
   font-weight: normal;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-weight: normal;
+}
+
+h3 {
+  font-weight: bold;
 }
 
 
