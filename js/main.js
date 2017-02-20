@@ -27,35 +27,40 @@
       }, {});
 
     var publishers = Object.keys(clipsByPublisher);
-    var clipsEl = document.querySelectorAll('#clips-content')[0];
+    var accordionEl = document.querySelectorAll('#accordion')[0];
 
-    renderAccordion(clipsEl, publishers, clipsByPublisher, bindEventHandlers);
+    renderAccordion($(accordionEl), publishers, clipsByPublisher, bindEventHandlers);
   });
 
-  function renderAccordion(rootEl, publishers, clipsByPublisher, cb) {
-    var accordion = document.createElement('div');
-    var panels = publishers.reduce(function(panelStr, publisher) {
-      var arrOfClips = clipsByPublisher[publisher];
-      return panelStr + makePanel(publisher, arrOfClips);
-    }, '');
+  function renderAccordion($rootEl, publishers, clipsByPublisher, cb) {
+    var panels = publishers.map(function(publisher) {
+      return $(makePanel(publisher, clipsByPublisher[publisher]));
+    });
 
-    accordion.className = "accordion";
-    $(accordion).append(panels);
-    rootEl.appendChild(accordion);
+    var appendInterval = setInterval(function() {
+      if (panels.length) {
+        var $panel = panels.splice(0, 1)[0];
+
+        $rootEl.append($panel);
+        $panel.fadeIn()
+      } else {
+        clearInterval(appendInterval);
+      }
+    }, 125);
 
     cb();
   }
 
   function makePanel(title, arrOfClips) {
     var anchoredClips = arrOfClips.reduce(function(strOfAnchors, clip) {
-      return strOfAnchors + '<a target="_blank" href="' + clip.link + '"><span>' + clip.headline + '</span></a>';
+      return strOfAnchors + '<li><a target="_blank" href="' + clip.link + '"><span>' + clip.headline + '</span></a></li>';
     }, '');
 
-    return '<div class="accordion__container"><div class="accordion__menu"><h2>' + title + '</h2></div><div class="accordion__items">' + anchoredClips + '</div></div>';
+    return '<div class="accordion__container"><div class="accordion__menu"><h3>' + title + '</h3></div><ul class="accordion__items">' + anchoredClips + '</ul></div>';
   }
 
   function bindEventHandlers() {
-    $('.accordion__menu').click(function() {
+    $('#accordion').on('click', '.accordion__menu', function() {
       $(this).parent().find('.accordion__items').slideToggle();
     });
   }

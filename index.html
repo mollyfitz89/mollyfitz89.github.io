@@ -5,81 +5,59 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Writer and editor based in New York City.">
+    <meta name="description" content="Freelance writer and editor based in New York City.">
     <title>Molly Fitzpatrick</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="css/normalize.css" rel="stylesheet" >
+    <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container main" id="splash">
-        <div class="row">
-            <div class="col-md-9 col-md-offset-3 col-sm-12">
-                <div class="logo">
-                    <h1>MOLLY FITZPATRICK</h1>
-                    <h3>WRITER & EDITOR
+  <div class="main">
+    <div class="masthead container background-accent">
+      <div class="about">
+        <div class="logo">
+          <h1>MOLLY FITZPATRICK</h1>
+          <h3>
+            WRITER & EDITOR
             <span class="bullet">&#149;</span>
-            <span class="location">NEW YORK, NY</span>
+            <span class="purple-text">NEW YORK, NY</span>
           </h3>
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
 
-        <div class="row" id="nav-trio">
-            <div class="col-md-9 col-md-offset-3">
-                <div class="row">
-                    <div class="col-sm-3 nav-item">
-                        <h4>SOCIAL</h4>
-                        <a href="http://www.twitter.com/mollyfitz" target="_blank">Twitter</a>
-                        <br>
-                        <a href="http://www.linkedin.com/in/mollyfitz" target="_blank">LinkedIn</a>
-                    </div>
-                    <div class="col-sm-3 nav-item">
-                        <h4>WORK</h4>
-                        <a href="#clips">Clips</a>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container work">
+      <h2 class="purple-text">Work</h2>
+      <div id="accordion"></div>
     </div>
-    <div class="container full-width main" id="clips">
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="clips">
-                    <div id="clips-content" class="content">
-                        <h1 class="location">Clips</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="container social background-accent">
+      <h2 class="purple-text">Social</h2>
+      <a href="https://www.twitter.com/mollyfitz" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/mollyfitz" target="_blank">LinkedIn</a>
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    <script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function() {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'http://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-47874692-1', 'mollyfitz.net');
-    ga('send', 'pageview');
-    </script>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+  (function(b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+          function() {
+              (b[l].q = b[l].q || []).push(arguments)
+          });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = 'http://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-47874692-1', 'mollyfitz.net');
+  ga('send', 'pageview');
+  </script>
 </body>
 
 </html>
