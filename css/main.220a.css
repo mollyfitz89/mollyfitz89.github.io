@@ -105,13 +105,16 @@ body {
   margin-bottom: 10px;
 }
 
-.accordion__items li::before {
+.accordion__items li div {
+  display: flex;
+  align-items: center;
+}
+
+.accordion__items li div::before {
   content: "•";
   padding-right: 10px;
   color: #4000a7;
-  position: relative;
-  top: 3px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .accordion__menu {
