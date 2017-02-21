@@ -82,6 +82,11 @@ body {
   font-size: 3rem;
 }
 
+.callout {
+  background-color: white;
+  padding: 2px 3px;
+}
+
 .purple-text {
   color: #4000a7;
 }
