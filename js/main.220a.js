@@ -53,7 +53,7 @@
 
   function makePanel(title, arrOfClips) {
     var anchoredClips = arrOfClips.reduce(function(strOfAnchors, clip) {
-      return strOfAnchors + '<li><a target="_blank" href="' + clip.link + '"><span>' + clip.headline + '</span></a></li>';
+      return strOfAnchors + '<li><div><a target="_blank" href="' + clip.link + '">' + clip.headline + '</a></div></li>';
     }, '');
 
     return '<div class="accordion__container"><div class="accordion__menu"><h3>' + title + '</h3></div><ul class="accordion__items">' + anchoredClips + '</ul></div>';
