@@ -12,8 +12,9 @@ h1, h2 {
 
 h3 {
   font-weight: bold;
+  margin: 0;
+  padding: 0.75rem 0;
 }
-
 
 h2 {
   font-size: 2rem;
@@ -98,11 +99,13 @@ body {
 
 .accordion__container {
   display: none;
+  padding-bottom: 0.1rem;
 }
 
 .accordion__items {
   display: none;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
