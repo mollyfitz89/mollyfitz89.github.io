@@ -167,4 +167,8 @@ body {
   .masthead::after {
     border-left-width: 100vw;
   }
+
+  .masthead, .about {
+    min-height: 40vh;
+  }
 }
