@@ -1,45 +1,48 @@
 html {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #404D5B;
   font-size: 14px;
   background: #f5f5f5;
   font-weight: normal;
 }
-
 h1, h2 {
   font-weight: normal;
 }
-
+h1{
+  font-size: 3rem;
+  text-shadow: 0px 3px 0px #e7e7e7;
+}
 h3 {
   font-weight: bold;
   margin: 0;
   padding: 0.75rem 0;
 }
-
 h2 {
   font-size: 2rem;
 }
-
 a {
   color: #404D5B;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
-
-.main {
-  max-width: 480px;
-  margin: 0 auto;
+svg {
+  width: 100%;
+  height: 20vh;
+  fill: #ff6873;
 }
-
+.main {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 5px 20px 10px 1px rgba(0, 0, 0, 30%)
+}
 .container {
   background: white;
   padding: 0 30px;
@@ -47,128 +50,132 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
 .masthead {
-  border-top: 3px solid #4000a7;
+  border-top: 10px solid #ff6873;
   padding-bottom: 75px;
   min-height: 30vh;
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-style: italic;
 }
-
-.masthead::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 466px solid #fff;
-  border-top: 80px solid transparent;
-  font-size: 0;
-  line-height: 0;
+.masthead__border {
   position: absolute;
-  display: inline;
   bottom: 0;
   left: 0;
 }
-
 .about {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 30vh;
 }
-
 .logo {
   text-align: center;
 }
-
-.logo h1 {
-  font-size: 3rem;
-}
-
 .callout {
   background-color: white;
   padding: 2px 3px;
+  box-shadow: 0px 1px 13px -1px #999;
 }
-
 .purple-text {
-  color: #4000a7;
+  color: #ff6873;
 }
-
 .work {
-  padding-top: 3px;
-  padding-bottom: 20px;
+  background-color: #ff6873;
+  color: white;
+  padding-top: 20px;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
-
 .accordion__container {
-  display: none;
-  padding-bottom: 0.1rem;
+  padding-bottom: 10px;
 }
-
 .accordion__items {
   display: none;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .accordion__items li {
   margin-bottom: 10px;
 }
-
+.accordion__items a {
+  color: white;
+  font-family: 'Lato';
+  font-size: 16px;
+}
 .accordion__items li div {
   display: flex;
   align-items: center;
 }
-
 .accordion__items li div::before {
   content: "•";
   padding-right: 10px;
-  color: #4000a7;
+  color: white;
   font-size: 25px;
 }
-
 .accordion__menu {
   cursor: pointer;
+  padding-bottom: 10px;
 }
-
+.accordion__menu-publication {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin-bottom: 0;
+  box-shadow: 2px 2px 2px 2px;
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.accordion__menu-publication:hover {
+  box-shadow: 1px 1px 0px 0;
+  transform: translate(1px, 1px);
+}
 .social {
   padding: 30px;
-  border-bottom: 3px solid #4000a7;
+  border-bottom: 10px solid #ff6873;
+  margin-top: -10px;
 }
-
-.social::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-right: 466px solid #fff;
-  border-bottom: 80px solid transparent;
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  display: inline;
-  top: 0;
-  right: 0;
-}
-
 .social a {
   display: block;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 .social a:last-child {
   margin: 0;
 }
-
+.social__content {
+  margin-top: 10vh;
+}
+.social svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .background-accent {
-  background-color: #DFDBE5;
   background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.3'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
-@media (max-width: 480px) {
-  .masthead::after {
-    border-left-width: 100vw;
+.spacer {
+  position: absolute;
+  bottom: 5px;
+  background-color: #ff6873;
+  height: 10px;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+}
+@media (min-width: 480px) {
+  .main {
+    width: 480px;
   }
-
+}
+@media (max-width: 480px) {
   .masthead, .about {
     min-height: 40vh;
+  }
+  .logo h3 {
+    font-size: 1.1rem;
   }
 }
