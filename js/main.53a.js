@@ -1,17 +1,13 @@
 (function() {
-  var clips = $.get('https://spreadsheets.google.com/feeds/list/1ZkQdqqcItaWeyinrCYibK0zmmw6_4HE3Zjgfe98cyeI/1/public/basic?alt=json', function(data) {
+  var clips = $.get(
+    'https://opensheet.vercel.app/1ZkQdqqcItaWeyinrCYibK0zmmw6_4HE3Zjgfe98cyeI/Sheet1', function(data) {
 
-    var clipsByPublisher = data.feed.entry
+    var clipsByPublisher = data
       .map(function(entry) {
-        var content = entry.content.$t;
-        var publisher = entry.title.$t;
-        var headline = content.match(/^headline:\s(.*),\slink:/)[1];
-        var link = content.match(/link:\s(.*$)/)[1];
-
         return {
-          publisher: publisher,
-          headline: headline,
-          link: link
+          publisher: entry['Publisher'],
+          headline: entry['Headline'],
+          link: entry['Link']
         };
       })
       .reduce(function(groupedClips, clip) {
